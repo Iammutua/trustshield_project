@@ -1,0 +1,38 @@
+{% extends 'clientMaster.html' %}
+{% load static %}
+{% block style %}
+<style>
+    #dashboard {color: black; font-family: 'Inter-Bold';}
+</style>
+{% endblock %}
+{% block page %}
+Dashboard
+{% endblock %}
+{% block name %}
+{{fName}} {{lName}}
+{% endblock %}
+{% block content %}
+    <div class="row_1">
+        <div class="canvas" onclick="location.href=window.location.origin + '/policies' ">
+            <div class="canvas_child">
+                <p>1 <br>Active policies</p>
+                <img src="{% static 'images/policy.png' %}" alt="" width="60px">
+            </div>
+            <p class="more">More info</p>
+        </div>
+        <div class="canvas" onclick="location.href=window.location.origin + '/myclaims' ">
+            <div class="canvas_child">
+                <p>0 <br>Filed claims</p>
+                <img src="{% static 'images/claim.png' %}" alt="" width="60px">
+            </div>
+            <p class="more">More info</p>
+        </div>
+    </div>
+    <div class="row_2">
+        <div class="notifications">
+            <div class="canvas" id="notice">
+                <p>Notifications</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

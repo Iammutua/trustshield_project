@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/client.css' %}">
+    <title>Welcome {{fName}} {{lName}}</title>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url("{% static 'fonts/Inter-Regular.ttf' %}");
+        }
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url("{% static 'fonts/Inter-SemiBold.ttf' %}");
+        }
+        @font-face {
+            font-family: 'Inter-Medium';
+            src: url("{% static 'fonts/Inter-Medium.ttf' %}");
+        }
+        .form_cont {
+            height: 70%;
+        }
+        nav p, nav img {
+            display: inline;
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div class="main">
+        <div class="side_bar">
+            <div id="logo">
+                <img src="{% static 'images/shield.png' %}" alt="">
+                <p>TrustShield <br>Insurance</p>
+            </div>
+            <ul>
+                <li><a id="dashboard" href="/dashboard">Dashboard</a></li>
+                <li><a id="policies" href="/policies">Policies</a></li>
+                <li><a id="fileclaim" href="/fileclaim">File claim</a></li>
+                <li><a id="myclaims" href="/myclaims">My claims</a></li>
+                <li><a id="support" href="/support">Support</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        <div class="body">
+            <nav>
+                <p class="page" style="font-size: 26px;">{% block page %}{% endblock %}</p>
+                <a href=""><img src="{% static 'images/bell.png' %}" alt="" width="25px"></a>
+                <div id="profile">
+                    <img src="{% static 'images/boy.png' %}" alt="" width="50px">
+                    <p>{% block name %}{% endblock %}</p>
+                    <img src="{% static 'images/down-arrow.png' %}" alt="" width="20px">
+                </div>
+            </nav>
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

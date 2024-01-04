@@ -1,0 +1,44 @@
+{% extends 'clientMaster.html' %}
+{% load static %}
+{% block style %}
+<style>
+    #policies {color: black; font-family: 'Inter-Bold';}
+</style>
+{% endblock %}
+{% block page %}
+Policies
+{% endblock %}
+{% block name %}
+{{fName}} {{lName}}
+{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+          <th>Policy No</th>
+          <th>Holder</th>
+          <th>Type</th>
+          <th>Use</th>
+          <th>Status</th>
+          <th>Claims filed</th>
+          <th>Value</th>
+          <th>Registration</th>
+          <th>Date created</th>
+          <th>Expiry date</th>
+          <th>Next Premium</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+        </tr>
+      </table>
+      <a href="/applyPolicy">New application</a>
+{% endblock %}

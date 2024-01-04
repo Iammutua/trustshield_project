@@ -1,0 +1,29 @@
+{% extends 'clientMaster.html' %}
+{% block style %}
+<style>
+    #myclaims {color: black; font-family: 'Inter-Bold';}
+</style>
+{% endblock %}
+{% block page %}
+Terms and Conditions
+{% endblock %}
+{% block name %}
+{{fName}} {{lName}}
+{% endblock %}
+{% block content %}
+<div id="terms">
+    <ol>
+        <li>Mechanical and electrical failure: claims that arise as a result og mechanical and electrical failures will not be covered.</li>
+        <li>Political violence and terrorism: claims arising out of acts of terrorism and political violence are not covered unless otherwise indicated</li>
+        <li>The owner of the vehicle and family are not covered in the event of death or injury.</li>
+        <li>Use of the vehicle at the time of accident: What the vehicle is being used for at the time of the accident will determine if the claim is payable or not. Make sure you take the appropriate cover depending on the sure of the vehicle.</li>
+    </ol>
+    <form action="" method="post">
+        <input type="radio" id="accept" name="term_radio" value="Accept">
+        <label for="accept">Accept</label><br>
+        <input type="radio" id="deny" name="term_radio" value="Deny">
+        <label for="deny">Deny</label><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

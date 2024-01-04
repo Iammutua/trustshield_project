@@ -1,0 +1,41 @@
+{% extends 'clientMaster.html' %}
+{% block style %}
+<style>
+    #myclaims {color: black; font-family: 'Inter-Bold';}
+</style>
+{% endblock %}
+{% block page %}
+Apply for a policy
+{% endblock %}
+{% block name %}
+{{fName}} {{lName}}
+{% endblock %}
+{% block content %}
+    <div id="policy_cont">
+       <form action="" method="post">
+        {% csrf_token %}
+        <h4>New Policy Application</h4>
+        <p id="warning">Ensure you enter the correct details. Details once recorded cannot be changed.<br>Dishonesty can lead to denied claims, policy cancellations, and legal repercussions.</p>
+        <input type="text" name="fName" id="fName" placeholder="First name" value="{{fName}}" readonly>
+        <input type="text" name="lName" id="lName" placeholder="Last name" value="{{lName}}" readonly>
+        <input type="text" name="licenseNo" id="licenseNo" placeholder="License no.">
+        <p>Policy type:</p>
+        <input type="radio" name="pType" id="comprehensive" value="comprehensive">
+        <label for="comprehensive">Comprehensive</label><br>
+        <input type="radio" name="pType" id="third_party" value="third_party">
+        <label for="third_party">Third party</label><br>
+        <input type="radio" name="pType" id="ttf" value="ttf">
+        <label for="ttf">Thrid party, theft & fire</label><br>
+        <p>Vehicle use:</p>
+        <input type="radio" name="use" id="commercial" value="commercial">
+        <label for="commercial">Commercial</label><br>
+        <input type="radio" name="use" id="psv" value="psv">
+        <label for="psv">PSV</label><br>
+        <input type="radio" name="use" id="personal" value="personal">
+        <label for="personal">Personal</label><br>
+        <input type="text" name="value" id="value" placeholder="Vehicle value">
+        <input type="text" name="registration" id="registration" placeholder="Registration no.">
+        <button type="submit">APPLY</button>
+       </form>
+    </div>
+{% endblock %}

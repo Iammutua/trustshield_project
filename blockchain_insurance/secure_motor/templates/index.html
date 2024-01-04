@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url("{% static 'fonts/Inter-Regular.ttf' %}");
+        }
+        @font-face {
+            font-family: 'Inter-Bold';
+            src: url("{% static 'fonts/Inter-SemiBold.ttf' %}");
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <div id="logo">
+                    <img src="{% static 'images/shield.png' %}" alt="">
+                    <p>TrustShield Insurance</p>
+                </div>
+                <ul id="nav_links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="/register">Login / Sign up</a></li>
+                </ul>
+            </nav>
+            <div id="description_cont">
+                <div id="image">
+                    <img src="{% static 'images/car.png' %}" alt="">
+                </div>
+                <div id="description">
+                    <p class="small_txt">Welcome to</p>
+                    <p id="brand">TrustShield Insurance</p>
+                    <p class="small_txt">Faster, easier and more secure</p>
+                    <button>Get Started
+                        <img src="{% static 'images/right-arrow.png' %}" width="20px" alt="" style="padding-left: 5px;">
+                    </button>  
+                </div>
+            </div>
+        </div>
+    </header> 
+    <main>
+        <div class="about">
+            <p class="title">What is TrustShield?</p>
+            <p id="txt1">We provide insurance services <br>
+            for your vehicles...</p>
+        </div>
+        <hr>
+        <div class="about">
+            <p class="title">Why TrustShield?</p>
+            <p id="txt2">We provide insurance services <br>
+            for your vehicles...</p>
+        </div>
+    </main>
+    <footer>
+
+    </footer> 
+</body>
+</html>
